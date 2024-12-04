@@ -6,7 +6,7 @@
   <title>Proyectos</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
-<body>
+<body style="background-image: url('fondo.gif'); background-size: cover;">
   <header>
     <img src="logo.png" alt="Logo de la página" style="width: 100px; display: block; margin: 0 auto;">
     <h1>Proyectos</h1>
@@ -19,75 +19,93 @@
     <a href="mailto:franterrassawp@gmail.com" class="nav-button">Contacto</a>
   </nav>
 
-  <!-- Cartel de construcción -->
-  <div id="cartel-en-construccion">
-    <p>Página en construcción, perdonen las molestias</p>
-  </div>
+  <section id="categorias">
+    <h2>Categorías</h2>
+    <ul>
+      <li><a href="#playstation">Playstation</a></li>
+      <li><a href="#sega">Sega Megadrive</a></li>
+      <li><a href="#snes">Super Nintendo</a></li>
+      <li><a href="#msx">MSX</a></li>
+      <li><a href="#spectrum">Spectrum</a></li>
+      <li><a href="#amstrad">Amstrad</a></li>
+      <li><a href="#neogeo">Neo Geo MVS</a></li>
+    </ul>
+  </section>
 
-  <!-- Botones para controlar el cartel -->
-  <div class="control-cartel">
-    <button onclick="activarCartel()">Mostrar cartel</button>
-    <button onclick="desactivarCartel()">Ocultar cartel</button>
-  </div>
-
-  <main>
-    <section id="categorias">
-      <h2>Categorías</h2>
-      <div class="category-buttons">
-        <button onclick="filtrarProyectos('PlayStation')">PlayStation</button>
-        <button onclick="filtrarProyectos('Sega Mega Drive')">Sega Mega Drive</button>
-        <button onclick="filtrarProyectos('Super Nintendo')">Super Nintendo</button>
-        <button onclick="filtrarProyectos('MSX')">MSX</button>
-        <button onclick="filtrarProyectos('Spectrum')">Spectrum</button>
-        <button onclick="filtrarProyectos('Amstrad')">Amstrad</button>
-        <button onclick="filtrarProyectos('Neo Geo MVS')">Neo Geo MVS</button>
-        <button onclick="filtrarProyectos('')">Mostrar todos</button>
+  <section id="proyectos">
+    <div id="playstation" class="categoria">
+      <h3>Playstation</h3>
+      <div class="project">
+        <h4>Proyecto Playstation 1</h4>
+        <a href="proyecto_ps1.html">
+          <img src="ps1.jpg" alt="Proyecto Playstation 1">
+        </a>
       </div>
-    </section>
+    </div>
 
-    <section id="proyectos">
-      <h2>Todos los Proyectos</h2>
-      <div id="proyectos-container"></div>
-    </section>
-  </main>
+    <div id="sega" class="categoria">
+      <h3>Sega Megadrive</h3>
+      <div class="project">
+        <h4>Proyecto Sega Megadrive</h4>
+        <a href="proyecto_sega.html">
+          <img src="sega.jpg" alt="Proyecto Sega Megadrive">
+        </a>
+      </div>
+    </div>
+
+    <div id="snes" class="categoria">
+      <h3>Super Nintendo</h3>
+      <div class="project">
+        <h4>Proyecto Super Nintendo</h4>
+        <a href="proyecto_snes.html">
+          <img src="snes.jpg" alt="Proyecto Super Nintendo">
+        </a>
+      </div>
+    </div>
+
+    <div id="msx" class="categoria">
+      <h3>MSX</h3>
+      <div class="project">
+        <h4>Proyecto MSX</h4>
+        <a href="proyecto_msx.html">
+          <img src="msx.jpg" alt="Proyecto MSX">
+        </a>
+      </div>
+    </div>
+
+    <div id="spectrum" class="categoria">
+      <h3>Spectrum</h3>
+      <div class="project">
+        <h4>Proyecto Spectrum</h4>
+        <a href="proyecto_spectrum.html">
+          <img src="spectrum.jpg" alt="Proyecto Spectrum">
+        </a>
+      </div>
+    </div>
+
+    <div id="amstrad" class="categoria">
+      <h3>Amstrad</h3>
+      <div class="project">
+        <h4>Proyecto Amstrad</h4>
+        <a href="proyecto_amstrad.html">
+          <img src="amstrad.jpg" alt="Proyecto Amstrad">
+        </a>
+      </div>
+    </div>
+
+    <div id="neogeo" class="categoria">
+      <h3>Neo Geo MVS</h3>
+      <div class="project">
+        <h4>Proyecto Neo Geo MVS</h4>
+        <a href="proyecto_neogeo.html">
+          <img src="neogeo.jpg" alt="Proyecto Neo Geo MVS">
+        </a>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2024 Small PCB Page. Todos los derechos reservados.</p>
   </footer>
-
-  <script>
-    // Proyectos de ejemplo
-    const proyectos = [
-      { nombre: "Kit Ardutester", categoria: "MSX", imagen: "ardutester1.jpg", enlace: "proyecto1.html", descripcion: "Comprueba componentes electrónicos." },
-      { nombre: "Kit Gotek V2", categoria: "Amstrad", imagen: "gotek2.jpg", enlace: "proyecto2.html", descripcion: "Reemplaza tu disquetera con USB." }
-    ];
-
-    const proyectosContainer = document.getElementById("proyectos-container");
-
-    function mostrarProyectos(filtro = "") {
-      proyectosContainer.innerHTML = "";
-      const proyectosFiltrados = filtro
-        ? proyectos.filter(proyecto => proyecto.categoria === filtro)
-        : proyectos;
-
-      proyectosFiltrados.forEach(proyecto => {
-        proyectosContainer.innerHTML += `
-          <div class="project">
-            <h3>${proyecto.nombre}</h3>
-            <a href="${proyecto.enlace}">
-              <img src="${proyecto.imagen}" alt="Imagen del ${proyecto.nombre}">
-            </a>
-            <p>${proyecto.descripcion}</p>
-          </div>
-        `;
-      });
-    }
-
-    mostrarProyectos();
-
-    function filtrarProyectos(categoria) {
-      mostrarProyectos(categoria);
-    }
-  </script>
 </body>
 </html>
