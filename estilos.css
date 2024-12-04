@@ -1,15 +1,17 @@
-/* Estilos generales */
+/* Fondo con GIF */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  background-image: url('fondo.gif');
+  background-size: cover;
+  background-position: center;
+  color: #333;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
 }
 
+/* Estilos generales */
 header {
-  background-color: #0073e6;
+  background-color: rgba(0, 115, 230, 0.7);
   color: white;
   padding: 1rem;
   text-align: center;
@@ -17,19 +19,9 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 2rem;
-}
-
-/* Estilo para el texto introductor */
-.intro-text {
-  font-weight: bold;
-  text-align: center;
-  font-size: 1.5rem;
-  margin-top: 1rem;
 }
 
 nav {
-  margin-top: 1rem;
   text-align: center;
 }
 
@@ -50,24 +42,9 @@ nav a:hover {
   background-color: #005bb5;
 }
 
-/* Estilo principal de la página */
-main {
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  text-align: center;
-  color: #005bb5;
-}
-
 /* Cartel en construcción */
 #cartel-en-construccion {
-  display: none; /* Inicialmente oculto */
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -112,12 +89,13 @@ h2 {
   background-color: #005bb5;
 }
 
-/* Pie de página */
-footer {
-  background-color: #0073e6;
-  color: white;
+/* Categorías */
+.categorias-lista {
   text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
-  font-size: 0.9rem;
 }
+
+.categoria {
+  display: inline-block;
+  margin: 10Aquí tienes el código actualizado con el fondo en formato GIF, las categorías y las demás modificaciones que solicitaste. Los archivos que debes tener son:
+
+
