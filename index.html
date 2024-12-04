@@ -32,23 +32,42 @@
   </div>
 
   <main>
+    <!-- Novedades -->
+    <section id="novedades">
+      <h2>Últimas Novedades</h2>
+      <div id="novedades-container"></div>
+    </section>
+
+    <!-- Proyectos -->
     <section id="proyectos">
-      <h2>NOVEDADES</h2>
-      <div class="project">
-        <h3>Proyecto 1: Kit Ardutester</h3>
-        <a href="proyecto1.html">
-          <img src="ardutester1.jpg" alt="Imagen del Proyecto 1">
-        </a>
-        <p>Aparato a base de arduino para comprobar estado de componentes electrónicos</p>
-        <a href="https://github.com/FranTerrassa/Ardutester/tree/main" target="_blank" class="repo-button">Repositorio</a>
+      <h2>Proyectos</h2>
+      <div class="categorias">
+        <h3>PlayStation</h3>
+        <div id="categoria-playstation"></div>
       </div>
-      <div class="project">
-        <h3>Proyecto 2: Kit Gotek V2</h3>
-        <a href="proyecto2.html">
-          <img src="gotek2.jpg" alt="Imagen del Proyecto 2">
-        </a>
-        <p>Construye este proyecto y reemplaza tu vieja disquetera por interfaz a PEN-DRIVE.</p>
-        <a href="https://msxmakers.design.blog/proyectos/proyectos-multi/emulador-de-fdd-gotek-v2/gotek-v2-instrucciones-paso-a-paso/" target="_blank" class="repo-button">Tutorial</a>
+      <div class="categorias">
+        <h3>Sega Mega Drive</h3>
+        <div id="categoria-sega"></div>
+      </div>
+      <div class="categorias">
+        <h3>Super Nintendo</h3>
+        <div id="categoria-snes"></div>
+      </div>
+      <div class="categorias">
+        <h3>MSX</h3>
+        <div id="categoria-msx"></div>
+      </div>
+      <div class="categorias">
+        <h3>Spectrum</h3>
+        <div id="categoria-spectrum"></div>
+      </div>
+      <div class="categorias">
+        <h3>Amstrad</h3>
+        <div id="categoria-amstrad"></div>
+      </div>
+      <div class="categorias">
+        <h3>Neo Geo MVS</h3>
+        <div id="categoria-neo-geo"></div>
       </div>
     </section>
   </main>
@@ -58,51 +77,53 @@
   </footer>
 
   <script>
-    // Restaurar estado del cartel al cargar la página
-    window.onload = function() {
-      if (localStorage.getItem("cartelActivo") === "true") {
-        const cartel = document.getElementById('cartel-en-construccion');
-        if (cartel) {
-          cartel.classList.add('mostrar');
-        } else {
-          console.error("Elemento del cartel no encontrado al cargar la página");
-        }
-      }
+    // Proyectos (simulando datos de ejemplo)
+    const proyectos = [
+      { id: 1, nombre: "Kit Ardutester", categoria: "MSX", imagen: "ardutester1.jpg", enlace: "proyecto1.html", descripcion: "Aparato basado en Arduino para comprobar componentes electrónicos" },
+      { id: 2, nombre: "Kit Gotek V2", categoria: "Amstrad", imagen: "gotek2.jpg", enlace: "proyecto2.html", descripcion: "Reemplaza tu vieja disquetera por una interfaz USB." },
+      { id: 3, nombre: "PSX Modchip", categoria: "PlayStation", imagen: "psxmodchip.jpg", enlace: "proyecto3.html", descripcion: "Modchip para consolas PSX clásicas." },
+      { id: 4, nombre: "SNES SuperCIC", categoria: "Super Nintendo", imagen: "snessupercic.jpg", enlace: "proyecto4.html", descripcion: "Switch automático de región para SNES." }
+    ];
+
+    // Mostrar últimas novedades (los 2 proyectos más recientes)
+    const novedadesContainer = document.getElementById("novedades-container");
+    proyectos.slice(-2).reverse().forEach(proyecto => {
+      novedadesContainer.innerHTML += `
+        <div class="project">
+          <h3>${proyecto.nombre}</h3>
+          <a href="${proyecto.enlace}">
+            <img src="${proyecto.imagen}" alt="Imagen del ${proyecto.nombre}">
+          </a>
+          <p>${proyecto.descripcion}</p>
+        </div>
+      `;
+    });
+
+    // Categorías
+    const categorias = {
+      "PlayStation": document.getElementById("categoria-playstation"),
+      "Sega Mega Drive": document.getElementById("categoria-sega"),
+      "Super Nintendo": document.getElementById("categoria-snes"),
+      "MSX": document.getElementById("categoria-msx"),
+      "Spectrum": document.getElementById("categoria-spectrum"),
+      "Amstrad": document.getElementById("categoria-amstrad"),
+      "Neo Geo MVS": document.getElementById("categoria-neo-geo"),
     };
 
-    // Activar el cartel con contraseña
-    function activarCartel() {
-      let password = prompt("Introduce la contraseña:");
-      if (password === "Ainhoa2005!!") { // Cambia esta contraseña por la que desees
-        const cartel = document.getElementById('cartel-en-construccion');
-        if (cartel) {
-          cartel.classList.add('mostrar');
-          localStorage.setItem("cartelActivo", "true");
-          console.log("Cartel activado");
-        } else {
-          console.error("El elemento del cartel no se encontró al activar");
-        }
-      } else {
-        alert("Contraseña incorrecta");
+    proyectos.forEach(proyecto => {
+      const categoriaContainer = categorias[proyecto.categoria];
+      if (categoriaContainer) {
+        categoriaContainer.innerHTML += `
+          <div class="project">
+            <h3>${proyecto.nombre}</h3>
+            <a href="${proyecto.enlace}">
+              <img src="${proyecto.imagen}" alt="Imagen del ${proyecto.nombre}">
+            </a>
+            <p>${proyecto.descripcion}</p>
+          </div>
+        `;
       }
-    }
-
-    // Desactivar el cartel con contraseña
-    function desactivarCartel() {
-      let password = prompt("Introduce la contraseña:");
-      if (password === "Ainhoa2005!!") { // Debe coincidir con la contraseña para activar
-        const cartel = document.getElementById('cartel-en-construccion');
-        if (cartel) {
-          cartel.classList.remove('mostrar');
-          localStorage.setItem("cartelActivo", "false");
-          console.log("Cartel desactivado");
-        } else {
-          console.error("El elemento del cartel no se encontró al desactivar");
-        }
-      } else {
-        alert("Contraseña incorrecta");
-      }
-    }
+    });
   </script>
 </body>
 </html>
