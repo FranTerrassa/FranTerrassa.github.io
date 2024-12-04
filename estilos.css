@@ -20,6 +20,7 @@ header h1 {
   font-size: 2rem;
 }
 
+/* Estilo para el texto introductor */
 .intro-text {
   font-weight: bold;
   text-align: center;
@@ -28,21 +29,28 @@ header h1 {
 }
 
 nav {
-  text-align: center;
   margin-top: 1rem;
+  text-align: center;
 }
 
 nav a {
+  padding: 10px 20px;
+  background-color: #0073e6;
   color: white;
   text-decoration: none;
-  margin: 0 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   font-weight: bold;
+  margin: 10px;
+  display: inline-block;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color: #005bb5;
 }
 
+/* Estilo principal de la página */
 main {
   padding: 2rem;
   max-width: 800px;
@@ -59,7 +67,7 @@ h2 {
 
 /* Cartel en construcción */
 #cartel-en-construccion {
-  display: none;
+  display: none; /* Inicialmente oculto */
   position: fixed;
   top: 50%;
   left: 50%;
@@ -76,10 +84,21 @@ h2 {
   z-index: 9999;
 }
 
-#cartel-en-construccion.mostrar {
-  display: block;
+#cartel-en-construccion button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
+#cartel-en-construccion button:hover {
+  background-color: #e04d2b;
+}
+
+/* Estilo de los proyectos */
 .project img {
   width: 300px;
   height: auto;
@@ -89,6 +108,22 @@ h2 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.project a {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #0073e6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.project a:hover {
+  background-color: #005bb5;
+}
+
+/* Pie de página */
 footer {
   background-color: #0073e6;
   color: white;
@@ -96,28 +131,4 @@ footer {
   padding: 1rem 0;
   margin-top: 2rem;
   font-size: 0.9rem;
-}
-
-a {
-  color: #0073e6;
-}
-
-a:hover {
-  color: #005bb5;
-}
-
-/* Estilo de los botones */
-button {
-  padding: 10px 20px;
-  background-color: #0073e6;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 10px;
-  font-weight: bold;
-}
-
-button:hover {
-  background-color: #005bb5;
 }
