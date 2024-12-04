@@ -77,7 +77,7 @@ h2 {
   z-index: 9999;
 }
 
-#cartel-en-construccion. {
+#cartel-en-construccion. mostrar {
   display: block; /* Se muestra cuando se le agrega la clase 'mostrar' */
 }
 
