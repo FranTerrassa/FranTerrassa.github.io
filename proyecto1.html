@@ -8,12 +8,28 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 1rem;
+      padding: 0;
       background-color: #f5f5f5;
     }
     header {
+      background-color: #0073e6;
+      color: white;
+      padding: 1rem 0;
       text-align: center;
-      margin-bottom: 1rem;
+    }
+    nav {
+      background-color: #005bb5;
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      padding: 1rem;
     }
     img {
       width: 300px;
@@ -26,6 +42,13 @@
       text-align: center;
       margin-top: 1rem;
     }
+    footer {
+      background-color: #0073e6;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
@@ -33,19 +56,31 @@
     <h1>Controlador XYZ</h1>
     <p>Placa electrónica para tu proyecto de automatización</p>
   </header>
-  <div>
-    <img src="placa1a.jpg" alt="Vista 1 de la placa">
-    <img src="placa1b.jpg" alt="Vista 2 de la placa">
-  </div>
-  <div class="paypal-button">
-    <p><strong>Precio: $50 USD</strong></p>
-    <!-- Botón de PayPal -->
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-      <input type="hidden" name="cmd" value="_s-xclick">
-      <input type="hidden" name="hosted_button_id" value="CÓDIGO_DE_TU_BOTÓN_PAYPAL">
-      <input type="image" src="https://www.paypalobjects.com/es_ES/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - La forma fácil y segura de pagar en línea.">
-      <img alt="" border="0" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif" width="1" height="1">
-    </form>
-  </div>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#comprar">Comprar</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <main>
+    <section>
+      <h2>Detalles del Proyecto</h2>
+      <img src="placa1a.jpg" alt="Vista 1 de la placa">
+      <img src="placa1b.jpg" alt="Vista 2 de la placa">
+      <div class="paypal-button">
+        <p><strong>Precio: $50 USD</strong></p>
+        <!-- Botón de PayPal -->
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="CÓDIGO_DE_TU_BOTÓN_PAYPAL">
+          <input type="image" src="https://www.paypalobjects.com/es_ES/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - La forma fácil y segura de pagar en línea.">
+          <img alt="" border="0" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif" width="1" height="1">
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Mis Proyectos. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
