@@ -67,12 +67,13 @@ h2 {
 }
 
 .imagenes-proyecto img {
-  max-width: 80%; /* Ajusta el ancho máximo de la imagen */
+  width: 230px; /* Ajusta a 300px o el valor que prefieras */
   height: auto; /* Mantiene la proporción de la imagen */
-  display: block; /* Elimina los márgenes alrededor de la imagen */
-  margin: 0 auto; /* Centra la imagen dentro del contenedor */
+  display: block; 
+  margin: 0 auto;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 }
 
 /* Estilo del botón con imagen de Wallapop */
