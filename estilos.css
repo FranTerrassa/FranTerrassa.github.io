@@ -10,7 +10,7 @@ body {
 
 header {
   background-color: #0073e6;
-  color: White;
+  color: white;
   padding: 1rem;
   text-align: center;
 }
@@ -30,9 +30,9 @@ header h1 {
 
 nav {
   margin-top: 1rem;
+  text-align: center; /* Centra los botones de navegación */
 }
 
-/* Estilo para los botones del menú */
 nav a {
   display: inline-block;
   margin: 0 1rem;
@@ -42,12 +42,11 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
-  text-align: center;
   transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #005bb5; /* Cambio de color al pasar el puntero */
+  background-color: #005bb5;
 }
 
 /* Estilo principal de la página */
