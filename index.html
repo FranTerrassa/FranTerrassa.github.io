@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Proyectos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #0073e6;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    nav {
+      background-color: #005bb5;
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      padding: 1rem;
+    }
+    .project {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: white;
+      margin: 1rem 0;
+      padding: 1rem;
+      text-align: center;
+    }
+    .project img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #0073e6;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+    .paypal-button {
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mis Proyectos</h1>
+    <p>Explora mis creaciones y adquiere mis placas electrónicas excedentes</p>
+  </header>
+  <nav>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#comprar">Comprar</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <main>
+    <section id="proyectos">
+      <h2>Mis Proyectos</h2>
+      <div class="project">
+        <h3>Proyecto 1: Controlador XYZ</h3>
+        <img src="proyecto1.jpg" alt="Imagen del Proyecto 1">
+        <p>Descripción breve del proyecto. Incluye sus características principales y su propósito.</p>
+      </div>
+      <div class="project">
+        <h3>Proyecto 2: Sensor Inteligente</h3>
+        <img src="proyecto2.jpg" alt="Imagen del Proyecto 2">
+        <p>Descripción breve del proyecto. Detalla los componentes y su funcionamiento.</p>
+      </div>
+    </section>
+    <section id="comprar">
+      <h2>Comprar Placas</h2>
+      <p>Adquiere las placas excedentes de mis proyectos.</p>
+      <!-- Botón de PayPal -->
+      <div class="paypal-button">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="CÓDIGO_DE_TU_BOTÓN_PAYPAL">
+          <input type="image" src="https://www.paypalobjects.com/es_ES/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - La forma fácil y segura de pagar en línea.">
+          <img alt="" border="0" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif" width="1" height="1">
+        </form>
+      </div>
+    </section>
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Para más información, puedes contactarme a través de mi correo electrónico: <a href="mailto:tucorreo@example.com">tucorreo@example.com</a></p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Mis Proyectos. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
