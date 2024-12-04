@@ -12,21 +12,24 @@
     <h1>Proyectos</h1>
     <p class="intro-text">Explora algunas de mis creaciones y adquiere los kits o placas ya ensambladas</p>
   </header>
+
   <nav>
-    <a href="index.html">Inicio</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#comprar">Comprar</a>
-    <a href="mailto:franterrassawp@gmail.com">Contacto</a>
+    <a href="index.html" class="nav-button">Inicio</a>
+    <a href="#proyectos" class="nav-button">Proyectos</a>
+    <a href="#comprar" class="nav-button">Comprar</a>
+    <a href="mailto:franterrassawp@gmail.com" class="nav-button">Contacto</a>
   </nav>
-  
+
   <!-- Cartel de construcción -->
   <div id="cartel-en-construccion">
     <p>Página en construcción, perdonen las molestias</p>
   </div>
 
   <!-- Botones para controlar el cartel -->
-  <button onclick="activarCartel()">Mostrar cartel</button>
-  <button onclick="desactivarCartel()">Ocultar cartel</button>
+  <div class="control-cartel">
+    <button onclick="activarCartel()">Mostrar cartel</button>
+    <button onclick="desactivarCartel()">Ocultar cartel</button>
+  </div>
 
   <main>
     <section id="proyectos">
@@ -55,9 +58,9 @@
   </footer>
 
   <script>
-    // Comprobar el estado del cartel al cargar la página
+    // Restaurar estado del cartel al cargar la página
     window.onload = function() {
-      if(localStorage.getItem("cartelActivo") === "true") {
+      if (localStorage.getItem("cartelActivo") === "true") {
         document.getElementById('cartel-en-construccion').classList.add('mostrar');
       }
     };
@@ -65,9 +68,9 @@
     // Activar el cartel con contraseña
     function activarCartel() {
       let password = prompt("Introduce la contraseña:");
-      if(password === "Ainhoa2005!!") {
+      if (password === "Ainhoa2005!!") { // Cambia esta contraseña por la que desees
         document.getElementById('cartel-en-construccion').classList.add('mostrar');
-        localStorage.setItem("cartelActivo", "true"); // Guardar el estado
+        localStorage.setItem("cartelActivo", "true");
       } else {
         alert("Contraseña incorrecta");
       }
@@ -76,9 +79,9 @@
     // Desactivar el cartel con contraseña
     function desactivarCartel() {
       let password = prompt("Introduce la contraseña:");
-      if(password === "Ainhoa2005!!") {
+      if (password === "Ainhoa2005!!") { // Debe coincidir con la contraseña para activar
         document.getElementById('cartel-en-construccion').classList.remove('mostrar');
-        localStorage.setItem("cartelActivo", "false"); // Guardar el estado
+        localStorage.setItem("cartelActivo", "false");
       } else {
         alert("Contraseña incorrecta");
       }
