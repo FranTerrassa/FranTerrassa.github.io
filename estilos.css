@@ -29,9 +29,11 @@ header h1 {
 }
 
 nav {
+  display: flex;
+  justify-content: center; /* Centra los botones */
   margin-top: 1rem;
-  text-align: center; /* Centra los botones de navegación */
 }
+
 
 nav a {
   display: inline-block;
