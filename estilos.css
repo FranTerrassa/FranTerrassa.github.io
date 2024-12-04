@@ -84,21 +84,10 @@ h2 {
   z-index: 9999;
 }
 
-#cartel-en-construccion button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #ff5733;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+#cartel-en-construccion.mostrar {
+  display: block;
 }
 
-#cartel-en-construccion button:hover {
-  background-color: #e04d2b;
-}
-
-/* Estilo de los proyectos */
 .project img {
   width: 300px;
   height: auto;
