@@ -67,7 +67,7 @@ h2 {
 }
 
 .imagenes-proyecto img {
-  max-width: 300px; /* Ajusta el tamaño máximo de las imágenes */
+  max-width: 100px; /* Ajusta el tamaño máximo de las imágenes */
   height: auto; /* Mantiene la proporción de la imagen */
   display: block; 
   margin: 0 auto;
