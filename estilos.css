@@ -70,7 +70,7 @@ h2 {
   width: 230px; /* Ajusta a 300px o el valor que prefieras */
   height: auto; /* Mantiene la proporción de la imagen */
   display: block; 
-  margin: 0 auto;
+ //margin: 0 auto;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
