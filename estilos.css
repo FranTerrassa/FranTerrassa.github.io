@@ -1,13 +1,13 @@
 /* Fondo con GIF */
-body {
-  font-family: Arial, sans-serif;
-  background-image: url('fondo.gif');
-  background-size: cover;
-  background-position: center;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
+/*body {
+ / font-family: Arial, sans-serif;
+  /background-image: url('fondo.gif');
+  /background-size: cover;
+  /background-position: center;
+  /color: #333;
+ / margin: 0;
+  /padding: 0;
+/}
 
 /* Estilos generales */
 header {
