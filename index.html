@@ -4,11 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mis Proyectos</title>
-  <link rel="stylesheet" href="estilos.css"> <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="estilos.css"> <!-- Asegúrate de que este archivo existe y contiene los estilos -->
+  <style>
+    /* Asegura que los botones del menú sean visibles */
+    nav {
+      background-color: #005bb5; /* Fondo del menú */
+      text-align: center;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: white; /* Color del texto de los botones */
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    nav a:hover {
+      text-decoration: underline; /* Subrayado al pasar el ratón */
+    }
+  </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo de la página">
+    <img src="logo.png" alt="Logo de la página" style="width: 100px; display: block; margin: 0 auto;">
     <h1>Proyectos</h1>
     <p>Explora algunas de mis creaciones y adquiere los kits o placas ya ensambladas</p>
   </header>
@@ -16,7 +34,7 @@
     <a href="index.html">Inicio</a>
     <a href="#proyectos">Proyectos</a>
     <a href="#comprar">Comprar</a>
-     <a href="mailto:franterrassawp@gmail.com">Contacto</a>
+    <a href="mailto:franterrassawp@gmail.com">Contacto</a>
   </nav>
   <main>
     <section id="proyectos">
@@ -26,15 +44,15 @@
         <a href="proyecto1.html">
           <img src="proyecto1.jpg" alt="Imagen del Proyecto 1">
         </a>
-        <p>La pcb esta diseñada para ser lo más pequeña y manejable posible. Se alimenta de 9v, por debajo de ese voltaje podría dar malos resultados. Se a optado por resistencias SMD 1206 1/4w por el espacio que ocupan y no siendo muy dificiles de soldar para usuario medio y se a agregado una resistencia variable de 2k, (VR1) para ajustar el contraste de la pantalla.</p>
-      <a href="https://github.com/FranTerrassa/Ardutester/tree/main" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0073e6; color: white; text-decoration: none; border-radius: 5px;">Repositorio</a>
+        <p>La pcb está diseñada para ser lo más pequeña y manejable posible. Se alimenta de 9v, por debajo de ese voltaje podría dar malos resultados. Se ha optado por resistencias SMD 1206 1/4w por el espacio que ocupan y no siendo muy difíciles de soldar para el usuario medio. Además, se ha agregado una resistencia variable de 2k (VR1) para ajustar el contraste de la pantalla.</p>
+        <a href="https://github.com/FranTerrassa/Ardutester/tree/main" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0073e6; color: white; text-decoration: none; border-radius: 5px;">Repositorio</a>
       </div>
       <div class="project">
         <h3>Proyecto 2: Kit Gotek V2</h3>
         <a href="proyecto2.html">
           <img src="proyecto2.jpg" alt="Imagen del Proyecto 2">
         </a>
-        <p>Esta es una solución actual para aquellos ordenadores que dependen de las añoradas disqueteras, tan deterioradas en estos tiempos, y evitar sus caros consumibles En el tutorial, que realice yo mismo colaborando con MSXMakers, la soldadura se realiza con una plancha, pero tambien se puede realizar con un soldador común.</p>
+        <p>Esta es una solución actual para aquellos ordenadores que dependen de las añoradas disqueteras, tan deterioradas en estos tiempos, y evitar sus caros consumibles. En el tutorial, que realicé colaborando con MSXMakers, la soldadura se realiza con una plancha, pero también se puede realizar con un soldador común.</p>
         <a href="https://msxmakers.design.blog/proyectos/proyectos-multi/emulador-de-fdd-gotek-v2/gotek-v2-instrucciones-paso-a-paso/" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #0073e6; color: white; text-decoration: none; border-radius: 5px;">Tutorial</a>
       </div>
     </section>
