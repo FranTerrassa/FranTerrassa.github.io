@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mis Proyectos</title>
+  <title>Detalle:Kit Gotek V2</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -31,20 +31,16 @@
     main {
       padding: 1rem;
     }
-    .project {
+    img {
+      width: 300px;
+      height: auto;
+      margin: 0.5rem;
       border: 1px solid #ddd;
       border-radius: 5px;
-      background: white;
-      margin: 1rem 0;
-      padding: 1rem;
-      text-align: center;
     }
-    .project img {
-      width: 300px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 5px;
-      cursor: pointer;
+    .paypal-button {
+      text-align: center;
+      margin-top: 1rem;
     }
     footer {
       background-color: #0073e6;
@@ -57,8 +53,8 @@
 </head>
 <body>
   <header>
-    <h1>Mis Proyectos</h1>
-    <p>Explora mis creaciones y adquiere mis placas electrónicas excedentes</p>
+    <h1>Kit Gotek V2</h1>
+    <p>Placa electrónica para tu proyecto de automatización</p>
   </header>
   <nav>
     <a href="index.html">Inicio</a>
@@ -67,21 +63,19 @@
     <a href="#contacto">Contacto</a>
   </nav>
   <main>
-    <section id="proyectos">
-      <h2>Mis Proyectos</h2>
-      <div class="project">
-        <h3>Proyecto 1: Ardutester</h3>
-        <a href="proyecto1.html">
-          <img src="proyecto1.jpg" alt="Imagen del Proyecto 1">
-        </a>
-        <p>Descripción breve del proyecto. Incluye sus características principales y su propósito.</p>
-      </div>
-      <div class="project">
-        <h3>Proyecto 2: Kit Gotek V2</h3>
-        <a href="proyecto2.html">
-          <img src="proyecto2.jpg" alt="Imagen del Proyecto 2">
-        </a>
-        <p>Descripción breve del proyecto. Detalla los componentes y su funcionamiento.</p>
+    <section>
+      <h2>Detalles del Proyecto</h2>
+      <img src="placa1a.jpg" alt="Vista 1 de la placa">
+      <img src="placa1b.jpg" alt="Vista 2 de la placa">
+      <div class="paypal-button">
+        <p><strong>Precio: $50 USD</strong></p>
+        <!-- Botón de PayPal -->
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="CÓDIGO_DE_TU_BOTÓN_PAYPAL">
+          <input type="image" src="https://www.paypalobjects.com/es_ES/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - La forma fácil y segura de pagar en línea.">
+          <img alt="" border="0" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif" width="1" height="1">
+        </form>
       </div>
     </section>
   </main>
@@ -90,3 +84,4 @@
   </footer>
 </body>
 </html>
+
