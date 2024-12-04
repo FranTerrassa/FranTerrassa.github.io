@@ -8,6 +8,22 @@ body {
   color: #333;
 }
 
+/* Estilo para las imágenes dentro del contenedor .project */
+.project img {
+  width: 100%; /* Se adapta al 100% del contenedor */
+  max-width: 400px; /* Tamaño máximo, ajustable a tu necesidad */
+  height: auto; /* Mantiene la proporción */
+  display: block; /* Elimina el espacio debajo de la imagen */
+  margin: 0 auto; /* Centra la imagen */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project {
+  margin-bottom: 2rem;
+}
+
+/* Estilo para otros elementos */
 header {
   background-color: #0073e6;
   color: white;
@@ -15,17 +31,17 @@ header {
   text-align: center;
 }
 
-header h1 {
+h1 {
   margin: 0;
   font-size: 2rem;
 }
 
 /* Estilo para el texto introductor */
 .intro-text {
-  font-weight: bold; /* Hace el texto en negrita */
-  text-align: center; /* Centra el texto en la página */
-  font-size: 1.5rem; /* Ajusta el tamaño de la fuente */
-  margin-top: 1rem; /* Agrega un margen superior para separación */
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }
 
 nav {
@@ -53,42 +69,6 @@ main {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  text-align: center;
-  color: #005bb5;
-}
-
-/* Imágenes del proyecto */
-.imagenes-proyecto {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.imagenes-proyecto img {
-  max-width: 100px; /* Ajusta el tamaño máximo de las imágenes */
-  height: auto; /* Mantiene la proporción de la imagen */
-  display: block; 
-  margin: 0 auto;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo del botón con imagen de Wallapop */
-.boton-wallapop img {
-  width: 150px; /* Tamaño del botón */
-  height: auto;
-  display: block;
-  margin: 1rem auto 0;
-  transition: opacity 0.3s ease; /* Animación de suavidad */
-}
-
-.boton-wallapop img:hover {
-  opacity: 0.8; /* Efecto visual al pasar el ratón */
-}
-
-/* Pie de página */
 footer {
   background-color: #0073e6;
   color: white;
@@ -98,14 +78,12 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Asegurar que el contenido no se extienda demasiado */
 p {
   word-wrap: break-word;
   text-align: justify;
   margin-bottom: 1.5rem;
 }
 
-/* Botón de contacto o enlaces destacados */
 a {
   color: #0073e6;
 }
