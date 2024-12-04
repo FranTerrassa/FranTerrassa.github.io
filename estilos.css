@@ -8,22 +8,6 @@ body {
   color: #333;
 }
 
-/* Estilo para las imágenes dentro del contenedor .project */
-.project img {
-  width: 100%; /* Se adapta al 100% del contenedor */
-  max-width: 150px; /* Tamaño máximo, ajustable a tu necesidad */
-  height: auto; /* Mantiene la proporción */
-  display: block; /* Elimina el espacio debajo de la imagen */
-  margin: 0 auto; /* Centra la imagen */
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.project {
-  margin-bottom: 2rem;
-}
-
-/* Estilo para otros elementos */
 header {
   background-color: #0073e6;
   color: white;
@@ -31,7 +15,7 @@ header {
   text-align: center;
 }
 
-h1 {
+header h1 {
   margin: 0;
   font-size: 2rem;
 }
@@ -69,6 +53,44 @@ main {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+h2 {
+  text-align: center;
+  color: #005bb5;
+}
+
+/* Cartel en construcción */
+#cartel-en-construccion {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffcc00;
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 20px;
+  border: 3px solid #ff5733;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 9999;
+}
+
+#cartel-en-construccion.mostrar {
+  display: block; /* Se muestra cuando se le agrega la clase 'mostrar' */
+}
+
+/* Imágenes de proyectos */
+.project img {
+  width: 300px; /* Ajusta el tamaño de las imágenes */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 footer {
   background-color: #0073e6;
   color: white;
@@ -78,12 +100,7 @@ footer {
   font-size: 0.9rem;
 }
 
-p {
-  word-wrap: break-word;
-  text-align: justify;
-  margin-bottom: 1.5rem;
-}
-
+/* Botones de contacto */
 a {
   color: #0073e6;
 }
