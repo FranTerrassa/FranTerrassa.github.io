@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo de la página" style="width: 100px; display: block; margin: 0 auto;">
+    <h1>Proyectos</h1>
+  </header>
+
+  <nav>
+    <a href="index.html" class="nav-button">Inicio</a>
+    <a href="proyectos.html" class="nav-button">Proyectos</a>
+    <a href="#comprar" class="nav-button">Comprar</a>
+    <a href="mailto:franterrassawp@gmail.com" class="nav-button">Contacto</a>
+  </nav>
+
+  <!-- Cartel de construcción -->
+  <div id="cartel-en-construccion">
+    <p>Página en construcción, perdonen las molestias</p>
+  </div>
+
+  <!-- Botones para controlar el cartel -->
+  <div class="control-cartel">
+    <button onclick="activarCartel()">Mostrar cartel</button>
+    <button onclick="desactivarCartel()">Ocultar cartel</button>
+  </div>
+
+  <main>
+    <section id="categorias">
+      <h2>Categorías</h2>
+      <div class="category-buttons">
+        <button onclick="filtrarProyectos('PlayStation')">PlayStation</button>
+        <button onclick="filtrarProyectos('Sega Mega Drive')">Sega Mega Drive</button>
+        <button onclick="filtrarProyectos('Super Nintendo')">Super Nintendo</button>
+        <button onclick="filtrarProyectos('MSX')">MSX</button>
+        <button onclick="filtrarProyectos('Spectrum')">Spectrum</button>
+        <button onclick="filtrarProyectos('Amstrad')">Amstrad</button>
+        <button onclick="filtrarProyectos('Neo Geo MVS')">Neo Geo MVS</button>
+        <button onclick="filtrarProyectos('')">Mostrar todos</button>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <h2>Todos los Proyectos</h2>
+      <div id="proyectos-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Small PCB Page. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Proyectos de ejemplo
+    const proyectos = [
+      { nombre: "Kit Ardutester", categoria: "MSX", imagen: "ardutester1.jpg", enlace: "proyecto1.html", descripcion: "Comprueba componentes electrónicos." },
+      { nombre: "Kit Gotek V2", categoria: "Amstrad", imagen: "gotek2.jpg", enlace: "proyecto2.html", descripcion: "Reemplaza tu disquetera con USB." }
+    ];
+
+    const proyectosContainer = document.getElementById("proyectos-container");
+
+    function mostrarProyectos(filtro = "") {
+      proyectosContainer.innerHTML = "";
+      const proyectosFiltrados = filtro
+        ? proyectos.filter(proyecto => proyecto.categoria === filtro)
+        : proyectos;
+
+      proyectosFiltrados.forEach(proyecto => {
+        proyectosContainer.innerHTML += `
+          <div class="project">
+            <h3>${proyecto.nombre}</h3>
+            <a href="${proyecto.enlace}">
+              <img src="${proyecto.imagen}" alt="Imagen del ${proyecto.nombre}">
+            </a>
+            <p>${proyecto.descripcion}</p>
+          </div>
+        `;
+      });
+    }
+
+    mostrarProyectos();
+
+    function filtrarProyectos(categoria) {
+      mostrarProyectos(categoria);
+    }
+  </script>
+</body>
+</html>
