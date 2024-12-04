@@ -1,108 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyectos</title>
+  <title>Proyectos - Small PCB Page</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
-<body style="background-image: url('fondo.gif'); background-size: cover;">
+<body>
   <header>
     <img src="logo.png" alt="Logo de la página" style="width: 100px; display: block; margin: 0 auto;">
     <h1>Proyectos</h1>
+    <p class="intro-text">Explora y descubre todos mis proyectos clasificados por categoría</p>
   </header>
 
   <nav>
     <a href="index.html" class="nav-button">Inicio</a>
-    <a href="proyectos.html" class="nav-button">Proyectos</a>
+    <a href="#proyectos" class="nav-button">Proyectos</a>
     <a href="#comprar" class="nav-button">Comprar</a>
     <a href="mailto:franterrassawp@gmail.com" class="nav-button">Contacto</a>
   </nav>
 
-  <section id="categorias">
-    <h2>Categorías</h2>
-    <ul>
-      <li><a href="#playstation">Playstation</a></li>
-      <li><a href="#sega">Sega Megadrive</a></li>
-      <li><a href="#snes">Super Nintendo</a></li>
-      <li><a href="#msx">MSX</a></li>
-      <li><a href="#spectrum">Spectrum</a></li>
-      <li><a href="#amstrad">Amstrad</a></li>
-      <li><a href="#neogeo">Neo Geo MVS</a></li>
-    </ul>
-  </section>
-
-  <section id="proyectos">
-    <div id="playstation" class="categoria">
-      <h3>Playstation</h3>
-      <div class="project">
-        <h4>Proyecto Playstation 1</h4>
-        <a href="proyecto_ps1.html">
-          <img src="ps1.jpg" alt="Proyecto Playstation 1">
-        </a>
+  <main>
+    <section id="categorias">
+      <h2>Categorías de Proyectos</h2>
+      <div class="categorias-lista">
+        <a href="#playstation" class="categoria">Playstation</a>
+        <a href="#sega" class="categoria">Sega Megadrive</a>
+        <a href="#snes" class="categoria">Super Nintendo</a>
+        <a href="#msx" class="categoria">MSX</a>
+        <a href="#spectrum" class="categoria">Spectrum</a>
+        <a href="#amstrad" class="categoria">Amstrad</a>
+        <a href="#neogeo" class="categoria">Neo Geo MVS</a>
       </div>
-    </div>
+    </section>
 
-    <div id="sega" class="categoria">
-      <h3>Sega Megadrive</h3>
-      <div class="project">
-        <h4>Proyecto Sega Megadrive</h4>
-        <a href="proyecto_sega.html">
-          <img src="sega.jpg" alt="Proyecto Sega Megadrive">
-        </a>
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <!-- Aquí puedes agregar tus proyectos con la categoría específica -->
+      <div id="playstation" class="proyecto">
+        <h3>Proyecto 1: Playstation Mod</h3>
+        <p>Un mod de la Playstation original para mejorar su rendimiento y conectividad.</p>
       </div>
-    </div>
-
-    <div id="snes" class="categoria">
-      <h3>Super Nintendo</h3>
-      <div class="project">
-        <h4>Proyecto Super Nintendo</h4>
-        <a href="proyecto_snes.html">
-          <img src="snes.jpg" alt="Proyecto Super Nintendo">
-        </a>
+      <div id="sega" class="proyecto">
+        <h3>Proyecto 2: Sega Megadrive Mini</h3>
+        <p>Recreación de una consola Sega Megadrive Mini con nuevas características.</p>
       </div>
-    </div>
-
-    <div id="msx" class="categoria">
-      <h3>MSX</h3>
-      <div class="project">
-        <h4>Proyecto MSX</h4>
-        <a href="proyecto_msx.html">
-          <img src="msx.jpg" alt="Proyecto MSX">
-        </a>
-      </div>
-    </div>
-
-    <div id="spectrum" class="categoria">
-      <h3>Spectrum</h3>
-      <div class="project">
-        <h4>Proyecto Spectrum</h4>
-        <a href="proyecto_spectrum.html">
-          <img src="spectrum.jpg" alt="Proyecto Spectrum">
-        </a>
-      </div>
-    </div>
-
-    <div id="amstrad" class="categoria">
-      <h3>Amstrad</h3>
-      <div class="project">
-        <h4>Proyecto Amstrad</h4>
-        <a href="proyecto_amstrad.html">
-          <img src="amstrad.jpg" alt="Proyecto Amstrad">
-        </a>
-      </div>
-    </div>
-
-    <div id="neogeo" class="categoria">
-      <h3>Neo Geo MVS</h3>
-      <div class="project">
-        <h4>Proyecto Neo Geo MVS</h4>
-        <a href="proyecto_neogeo.html">
-          <img src="neogeo.jpg" alt="Proyecto Neo Geo MVS">
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2024 Small PCB Page. Todos los derechos reservados.</p>
