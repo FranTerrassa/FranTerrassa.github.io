@@ -11,7 +11,7 @@ body {
 /* Estilo para las imágenes dentro del contenedor .project */
 .project img {
   width: 100%; /* Se adapta al 100% del contenedor */
-  max-width: 400px; /* Tamaño máximo, ajustable a tu necesidad */
+  max-width: 150px; /* Tamaño máximo, ajustable a tu necesidad */
   height: auto; /* Mantiene la proporción */
   display: block; /* Elimina el espacio debajo de la imagen */
   margin: 0 auto; /* Centra la imagen */
