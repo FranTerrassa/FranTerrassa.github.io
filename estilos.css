@@ -67,7 +67,7 @@ h2 {
 }
 
 .imagenes-proyecto img {
-  max-width: 100%; /* Ajusta el tamaño máximo de la imagen a su contenedor */
+  max-width: 50%; /* Ajusta el tamaño máximo de la imagen a su contenedor */
   height: auto; /* Mantiene la proporción de la imagen */
   display: block; /* Elimina espacio extra alrededor de la imagen */
   margin: 0 auto; /* Centra la imagen en el contenedor */
