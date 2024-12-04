@@ -67,7 +67,7 @@ h2 {
 }
 
 .imagenes-proyecto img {
-  width: 130px; /* Ajusta a 300px o el valor que prefieras */
+  width: 50px; /* Ajusta a 300px o el valor que prefieras */
   height: auto; /* Mantiene la proporción de la imagen */
   display: block; 
   margin: 0 auto;
