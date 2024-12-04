@@ -1,0 +1,104 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #0073e6;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo principal de la página */
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #005bb5;
+}
+
+/* Imágenes del proyecto */
+.imagenes-proyecto {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.imagenes-proyecto img {
+  max-width: 45%; /* Ajusta el tamaño máximo de las imágenes */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del botón con imagen de Wallapop */
+.boton-wallapop img {
+  width: 150px; /* Tamaño del botón */
+  height: auto;
+  display: block;
+  margin: 1rem auto 0;
+  transition: opacity 0.3s ease; /* Animación de suavidad */
+}
+
+.boton-wallapop img:hover {
+  opacity: 0.8; /* Efecto visual al pasar el ratón */
+}
+
+/* Pie de página */
+footer {
+  background-color: #0073e6;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Asegurar que el contenido no se extienda demasiado */
+p {
+  word-wrap: break-word;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+}
+
+/* Botón de contacto o enlaces destacados */
+a {
+  color: #0073e6;
+}
+
+a:hover {
+  color: #005bb5;
+}
