@@ -32,23 +32,21 @@
   </div>
 
   <main>
-    <section id="proyectos">
-      <h2>NOVEDADES</h2>
+    <section id="novedades">
+      <h2>Últimas Novedades</h2>
       <div class="project">
-        <h3>Proyecto 1: Kit Ardutester</h3>
+        <h3>Kit Ardutester</h3>
         <a href="proyecto1.html">
-          <img src="ardutester1.jpg" alt="Imagen del Proyecto 1">
+          <img src="ardutester1.jpg" alt="Imagen del Proyecto Ardutester">
         </a>
-        <p>Aparato a base de arduino para comprobar estado de componentes electrónicos</p>
-        <a href="https://github.com/FranTerrassa/Ardutester/tree/main" target="_blank" class="repo-button">Repositorio</a>
+        <p>Aparato a base de Arduino para comprobar componentes electrónicos.</p>
       </div>
       <div class="project">
-        <h3>Proyecto 2: Kit Gotek V2</h3>
+        <h3>Kit Gotek V2</h3>
         <a href="proyecto2.html">
-          <img src="gotek2.jpg" alt="Imagen del Proyecto 2">
+          <img src="gotek2.jpg" alt="Imagen del Proyecto Gotek V2">
         </a>
-        <p>Construye este proyecto y reemplaza tu vieja disquetera por interfaz a PEN-DRIVE.</p>
-        <a href="https://msxmakers.design.blog/proyectos/proyectos-multi/emulador-de-fdd-gotek-v2/gotek-v2-instrucciones-paso-a-paso/" target="_blank" class="repo-button">Tutorial</a>
+        <p>Reemplaza tu disquetera por una interfaz USB moderna.</p>
       </div>
     </section>
   </main>
@@ -58,27 +56,47 @@
   </footer>
 
   <script>
+    // Restaurar estado del cartel al cargar la página
     window.onload = function() {
       if (localStorage.getItem("cartelActivo") === "true") {
-        document.getElementById('cartel-en-construccion').classList.add('mostrar');
+        const cartel = document.getElementById('cartel-en-construccion');
+        if (cartel) {
+          cartel.classList.add('mostrar');
+        } else {
+          console.error("Elemento del cartel no encontrado al cargar la página");
+        }
       }
     };
 
+    // Activar el cartel con contraseña
     function activarCartel() {
       let password = prompt("Introduce la contraseña:");
-      if (password === "Ainhoa2005!!") {
-        document.getElementById('cartel-en-construccion').classList.add('mostrar');
-        localStorage.setItem("cartelActivo", "true");
+      if (password === "Ainhoa2005!!") { // Cambia esta contraseña por la que desees
+        const cartel = document.getElementById('cartel-en-construccion');
+        if (cartel) {
+          cartel.classList.add('mostrar');
+          localStorage.setItem("cartelActivo", "true");
+          console.log("Cartel activado");
+        } else {
+          console.error("El elemento del cartel no se encontró al activar");
+        }
       } else {
         alert("Contraseña incorrecta");
       }
     }
 
+    // Desactivar el cartel con contraseña
     function desactivarCartel() {
       let password = prompt("Introduce la contraseña:");
-      if (password === "Ainhoa2005!!") {
-        document.getElementById('cartel-en-construccion').classList.remove('mostrar');
-        localStorage.setItem("cartelActivo", "false");
+      if (password === "Ainhoa2005!!") { // Debe coincidir con la contraseña para activar
+        const cartel = document.getElementById('cartel-en-construccion');
+        if (cartel) {
+          cartel.classList.remove('mostrar');
+          localStorage.setItem("cartelActivo", "false");
+          console.log("Cartel desactivado");
+        } else {
+          console.error("El elemento del cartel no se encontró al desactivar");
+        }
       } else {
         alert("Contraseña incorrecta");
       }
