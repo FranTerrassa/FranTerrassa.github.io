@@ -68,6 +68,7 @@ h2 {
 
 .imagenes-proyecto img {
   max-width: 40%; /* Ajusta el tamaño máximo de las imágenes */
+ height: auto; /* Mantiene la proporción original de la imagen */ 
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
