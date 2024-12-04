@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+  <div class="background"></div> <!-- Fondo animado -->
+  
   <header>
     <img src="logo.png" alt="Logo de la página" style="width: 100px; display: block; margin: 0 auto;">
     <h1>Small PCB Page</h1>
@@ -33,8 +35,8 @@
   </div>
 
   <main>
-    <section id="proyectos">
-      <h2>NOVEDADES</h2>
+    <section id="novedades">
+      <h2>Novedades</h2>
       <div class="project">
         <h3>Proyecto 1: Kit Ardutester</h3>
         <a href="proyecto1.html">
@@ -43,14 +45,6 @@
         <p>Aparato a base de arduino para comprobar estado de componentes electrónicos</p>
         <a href="https://github.com/FranTerrassa/Ardutester/tree/main" target="_blank" class="repo-button">Repositorio</a>
       </div>
-      <div class="project">
-        <h3>Proyecto 2: Kit Gotek V2</h3>
-        <a href="proyecto2.html">
-          <img src="gotek2.jpg" alt="Imagen del Proyecto 2">
-        </a>
-        <p>Construye este proyecto y reemplaza tu vieja disquetera por interfaz a PEN-DRIVE.</p>
-        <a href="https://msxmakers.design.blog/proyectos/proyectos-multi/emulador-de-fdd-gotek-v2/gotek-v2-instrucciones-paso-a-paso/" target="_blank" class="repo-button">Tutorial</a>
-      </div>
     </section>
   </main>
 
@@ -58,32 +52,6 @@
     <p>&copy; 2024 Small PCB Page. Todos los derechos reservados.</p>
   </footer>
 
-  <script>
-    window.onload = function() {
-      if (localStorage.getItem("cartelActivo") === "true") {
-        document.getElementById('cartel-en-construccion').classList.add('mostrar');
-      }
-    };
-
-    function activarCartel() {
-      let password = prompt("Introduce la contraseña:");
-      if (password === "Ainhoa2005!!") {
-        document.getElementById('cartel-en-construccion').classList.add('mostrar');
-        localStorage.setItem("cartelActivo", "true");
-      } else {
-        alert("Contraseña incorrecta");
-      }
-    }
-
-    function desactivarCartel() {
-      let password = prompt("Introduce la contraseña:");
-      if (password === "Ainhoa2005!!") {
-        document.getElementById('cartel-en-construccion').classList.remove('mostrar');
-        localStorage.setItem("cartelActivo", "false");
-      } else {
-        alert("Contraseña incorrecta");
-      }
-    }
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
