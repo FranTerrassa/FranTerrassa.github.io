@@ -20,19 +20,30 @@ header h1 {
   font-size: 2rem;
 }
 
+header img {
+  width: 100px; /* Asegura que el logo sea adecuado */
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+/* Estilo del menú de navegación */
 nav {
-  margin-top: 1rem;
+  background-color: #005bb5; /* Fondo del menú */
+  text-align: center;
+  padding: 1rem 0;
 }
 
 nav a {
-  color: white;
+  color: white; /* Color de los enlaces */
   text-decoration: none;
   margin: 0 1rem;
   font-weight: bold;
+  font-size: 1.2rem; /* Tamaño de la fuente de los enlaces */
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Subrayado al pasar el ratón */
 }
 
 /* Estilo principal de la página */
