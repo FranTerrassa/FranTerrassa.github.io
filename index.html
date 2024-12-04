@@ -40,11 +40,11 @@
       text-align: center;
     }
     .project img {
-      width: 300px; /* Ancho fijo */
-      height: 200px; /* Alto fijo */
-      object-fit: cover; /* Ajusta cómo se recorta la imagen */
-      border-radius: 5px; /* Bordes redondeados opcionales */
-      cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      cursor: pointer;
     }
     footer {
       background-color: #0073e6;
@@ -61,6 +61,7 @@
     <p>Explora mis creaciones y adquiere mis placas electrónicas excedentes</p>
   </header>
   <nav>
+    <a href="index.html">Inicio</a>
     <a href="#proyectos">Proyectos</a>
     <a href="#comprar">Comprar</a>
     <a href="#contacto">Contacto</a>
@@ -70,12 +71,16 @@
       <h2>Mis Proyectos</h2>
       <div class="project">
         <h3>Proyecto 1: Controlador XYZ</h3>
-        <img src="proyecto1.jpg" alt="Imagen del Proyecto 1" onclick="abrirDetalle('proyecto1.html')">
+        <a href="proyecto1.html">
+          <img src="proyecto1.jpg" alt="Imagen del Proyecto 1">
+        </a>
         <p>Descripción breve del proyecto. Incluye sus características principales y su propósito.</p>
       </div>
       <div class="project">
         <h3>Proyecto 2: Sensor Inteligente</h3>
-        <img src="proyecto2.jpg" alt="Imagen del Proyecto 2" onclick="abrirDetalle('proyecto2.html')">
+        <a href="proyecto2.html">
+          <img src="proyecto2.jpg" alt="Imagen del Proyecto 2">
+        </a>
         <p>Descripción breve del proyecto. Detalla los componentes y su funcionamiento.</p>
       </div>
     </section>
@@ -83,11 +88,5 @@
   <footer>
     <p>&copy; 2024 Mis Proyectos. Todos los derechos reservados.</p>
   </footer>
-  
-  <script>
-    function abrirDetalle(url) {
-      window.open(url, '_blank', 'width=800,height=600');
-    }
-  </script>
 </body>
 </html>
