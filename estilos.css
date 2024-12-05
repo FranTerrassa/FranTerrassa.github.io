@@ -74,7 +74,7 @@ h2 {
 
 /* Proyectos */
 .project img {
-  width: 300px; /* Ajusta el ancho deseado */
+  width: 100px; /* Ajusta el ancho deseado */
   height: auto; /* Mantiene proporciones */
   display: block;
   margin: 0 auto;
