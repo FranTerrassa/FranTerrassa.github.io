@@ -23,17 +23,6 @@
     <a href="mailto:franterrassawp@gmail.com" class="nav-button">Contacto</a>
   </nav>
 
-  <!-- Cartel de construcción -->
-  <div id="cartel-en-construccion">
-    <p>Página en construcción, perdonen las molestias</p>
-  </div>
-
-  <!-- Botones para controlar el cartel -->
-  <div class="control-cartel">
-    <button onclick="activarCartel()">Mostrar cartel</button>
-    <button onclick="desactivarCartel()">Ocultar cartel</button>
-  </div>
-
   <main>
     <section id="novedades">
       <h2>Novedades!!</h2>
@@ -51,66 +40,5 @@
   <footer>
     <p>&copy; 2024 Small PCB Page. Todos los derechos reservados.</p>
   </footer>
-
-  <script>
-    // Restaurar estado del cartel al cargar la página
-window.onload = function() {
-  if (localStorage.getItem("cartelActivo") === "true") {
-    const cartel = document.getElementById('cartel-en-construccion');
-    if (cartel) {
-      cartel.classList.add('mostrar');
-      // Desactivar todos los botones, excepto el del cartel
-      const botones = document.querySelectorAll('.nav-button, .menu-btn, .repo-button');
-      botones.forEach(button => {
-        button.classList.add('botones-desactivados');
-      });
-    }
-  }
-};
-
-// Activar el cartel con contraseña
-function activarCartel() {
-  let password = prompt("Introduce la contraseña:");
-  if (password === "Ainhoa2005!!") {
-    const cartel = document.getElementById('cartel-en-construccion');
-    if (cartel) {
-      cartel.classList.add('mostrar');
-      localStorage.setItem("cartelActivo", "true");
-
-      // Desactivar todos los botones, excepto el del cartel
-      const botones = document.querySelectorAll('.nav-button, .menu-btn, .repo-button');
-      botones.forEach(button => {
-        button.classList.add('botones-desactivados');
-      });
-    }
-  } else {
-    alert("Contraseña incorrecta");
-  }
-}
-
-// Desactivar el cartel con contraseña
-function desactivarCartel() {
-  let password = prompt("Introduce la contraseña:");
-  if (password === "Ainhoa2005!!") {
-    const cartel = document.getElementById('cartel-en-construccion');
-    if (cartel) {
-      cartel.classList.remove('mostrar');
-      localStorage.setItem("cartelActivo", "false");
-
-      // Reactivar todos los botones
-      const botones = document.querySelectorAll('.nav-button, .menu-btn, .repo-button');
-      botones.forEach(button => {
-        button.classList.remove('botones-desactivados');
-      });
-    }
-  } else {
-    alert("Contraseña incorrecta");
-  }
-}
-
-
-      }
-    }
-  </script>
 </body>
 </html>
