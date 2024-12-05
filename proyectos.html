@@ -23,17 +23,17 @@
     <a href="mailto:franterrassawp@gmail.com" class="nav-button">Contacto</a>
   </nav>
 
-  <!-- botones laterales -->
+  <!-- Botones laterales -->
   <div class="sidebar">
-  <button class="menu-btn">MSX</button>
-  <button class="menu-btn">SPECTRUM</button>
-  <button class="menu-btn">AMSTRAD</button>
-  <button class="menu-btn">PLAYSTATION</button>
-  <button class="menu-btn">NINTENDO</button>
-  <button class="menu-btn">SEGA</button>
-  <button class="menu-btn">MVS (NEO GEO)</button>
-  <button class="menu-btn">VARIOS SISTEMAS Y ELECTRÓNICA</button>
-</div>
+    <a href="#msx" class="menu-btn">MSX</a>
+    <a href="#spectrum" class="menu-btn">SPECTRUM</a>
+    <a href="#amstrad" class="menu-btn">AMSTRAD</a>
+    <a href="#playstation" class="menu-btn">PLAYSTATION</a>
+    <a href="#nintendo" class="menu-btn">NINTENDO</a>
+    <a href="#sega" class="menu-btn">SEGA</a>
+    <a href="#neo-geo" class="menu-btn">MVS (NEO GEO)</a>
+    <a href="#varios" class="menu-btn">VARIOS SISTEMAS Y ELECTRÓNICA</a>
+  </div>
 
   <!-- Cartel de construcción -->
   <div id="cartel-en-construccion">
@@ -54,7 +54,7 @@
         <a href="proyecto1.html">
           <img src="ardutester1.jpg" alt="Imagen del Proyecto 1">
         </a>
-        <p>Aparato a base de arduino para comprobar estado de componentes electrónicos</p>
+        <p>Aparato a base de Arduino para comprobar estado de componentes electrónicos</p>
         <a href="https://github.com/FranTerrassa/Ardutester/tree/main" target="_blank" class="repo-button">Repositorio</a>
       </div>
     </section>
@@ -65,22 +65,17 @@
   </footer>
 
   <script>
-    // Restaurar estado del cartel al cargar la página
     window.onload = function() {
       if (localStorage.getItem("cartelActivo") === "true") {
         const cartel = document.getElementById('cartel-en-construccion');
         if (cartel) {
           cartel.classList.add('mostrar');
-          // Desactivar botones
           const botones = document.querySelectorAll('.nav-button, .repo-button');
-          botones.forEach(button => {
-            button.classList.add('botones-desactivados');
-          });
+          botones.forEach(button => button.classList.add('botones-desactivados'));
         }
       }
     };
 
-    // Activar el cartel con contraseña
     function activarCartel() {
       let password = prompt("Introduce la contraseña:");
       if (password === "Ainhoa2005!!") {
@@ -88,19 +83,28 @@
         if (cartel) {
           cartel.classList.add('mostrar');
           localStorage.setItem("cartelActivo", "true");
-
-          // Desactivar botones
           const botones = document.querySelectorAll('.nav-button, .repo-button');
-          botones.forEach(button => {
-            button.classList.add('botones-desactivados');
-          });
+          botones.forEach(button => button.classList.add('botones-desactivados'));
         }
       } else {
         alert("Contraseña incorrecta");
       }
     }
 
-    // Desactivar el cartel con contraseña
     function desactivarCartel() {
-      let password = prompt("Introduce la
-
+      let password = prompt("Introduce la contraseña:");
+      if (password === "Ainhoa2005!!") {
+        const cartel = document.getElementById('cartel-en-construccion');
+        if (cartel) {
+          cartel.classList.remove('mostrar');
+          localStorage.setItem("cartelActivo", "false");
+          const botones = document.querySelectorAll('.nav-button, .repo-button');
+          botones.forEach(button => button.classList.remove('botones-desactivados'));
+        }
+      } else {
+        alert("Contraseña incorrecta");
+      }
+    }
+  </script>
+</body>
+</html>
