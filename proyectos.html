@@ -65,14 +65,14 @@
   </footer>
 
   <script>
-    // Restaurar estado del cartel al cargar la página
+ // Restaurar estado del cartel al cargar la página
 window.onload = function() {
   if (localStorage.getItem("cartelActivo") === "true") {
     const cartel = document.getElementById('cartel-en-construccion');
     if (cartel) {
       cartel.classList.add('mostrar');
-      // Desactivar botones de los proyectos
-      const botones = document.querySelectorAll('.menu-btn');
+      // Desactivar todos los botones, excepto el del cartel
+      const botones = document.querySelectorAll('.nav-button, .menu-btn, .repo-button');
       botones.forEach(button => {
         button.classList.add('botones-desactivados');
       });
@@ -89,8 +89,8 @@ function activarCartel() {
       cartel.classList.add('mostrar');
       localStorage.setItem("cartelActivo", "true");
 
-      // Desactivar los botones de los proyectos
-      const botones = document.querySelectorAll('.menu-btn');
+      // Desactivar todos los botones, excepto el del cartel
+      const botones = document.querySelectorAll('.nav-button, .menu-btn, .repo-button');
       botones.forEach(button => {
         button.classList.add('botones-desactivados');
       });
@@ -109,8 +109,8 @@ function desactivarCartel() {
       cartel.classList.remove('mostrar');
       localStorage.setItem("cartelActivo", "false");
 
-      // Reactivar los botones de los proyectos
-      const botones = document.querySelectorAll('.menu-btn');
+      // Reactivar todos los botones
+      const botones = document.querySelectorAll('.nav-button, .menu-btn, .repo-button');
       botones.forEach(button => {
         button.classList.remove('botones-desactivados');
       });
@@ -119,6 +119,7 @@ function desactivarCartel() {
     alert("Contraseña incorrecta");
   }
 }
+
 
       }
     }
