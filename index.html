@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="Explora kits electrónicos, proyectos retro y placas PCB personalizadas para MSX, Spectrum, y otros sistemas retro. Compra kits, componentes y más en nuestra tienda.">
+  <meta name="description" content="Explora kits electrónicos, proyectos retro y placas PCB personalizadas para MSX, Spectrum, y otros sistemas retro. Compra kits, componentes y más en nuestra tienda.">
   <meta name="keywords" content="kits electrónicos, placas PCB, proyectos retro, MSX, Spectrum, Amstrad, Neo Geo, kits para consolas retro">
   <title>Proyectos Retro: Kits y Placas PCB</title>
   <link rel="stylesheet" href="estilos.css">
@@ -59,11 +59,10 @@
         const cartel = document.getElementById('cartel-en-construccion');
         if (cartel) {
           cartel.classList.add('mostrar');
-          // Desactivar botones de navegación y repositorio
+          // Desactivar botones
           const botones = document.querySelectorAll('.nav-button, .repo-button');
           botones.forEach(button => {
             button.classList.add('botones-desactivados');
-            button.disabled = true; // Desactiva los botones en HTML
           });
         }
       }
@@ -72,21 +71,17 @@
     // Activar el cartel con contraseña
     function activarCartel() {
       let password = prompt("Introduce la contraseña:");
-      if (password === "Ainhoa2005!!") { // Cambia esta contraseña por la que desees
+      if (password === "Ainhoa2005!!") {
         const cartel = document.getElementById('cartel-en-construccion');
         if (cartel) {
           cartel.classList.add('mostrar');
           localStorage.setItem("cartelActivo", "true");
-          console.log("Cartel activado");
 
-          // Desactivar botones de navegación y repositorio
+          // Desactivar botones
           const botones = document.querySelectorAll('.nav-button, .repo-button');
           botones.forEach(button => {
             button.classList.add('botones-desactivados');
-            button.disabled = true;
           });
-        } else {
-          console.error("El elemento del cartel no se encontró al activar");
         }
       } else {
         alert("Contraseña incorrecta");
@@ -96,21 +91,17 @@
     // Desactivar el cartel con contraseña
     function desactivarCartel() {
       let password = prompt("Introduce la contraseña:");
-      if (password === "Ainhoa2005!!") { // Debe coincidir con la contraseña para activar
+      if (password === "Ainhoa2005!!") {
         const cartel = document.getElementById('cartel-en-construccion');
         if (cartel) {
           cartel.classList.remove('mostrar');
           localStorage.setItem("cartelActivo", "false");
-          console.log("Cartel desactivado");
 
           // Reactivar los botones
           const botones = document.querySelectorAll('.nav-button, .repo-button');
           botones.forEach(button => {
             button.classList.remove('botones-desactivados');
-            button.disabled = false; // Reactiva los botones
           });
-        } else {
-          console.error("El elemento del cartel no se encontró al desactivar");
         }
       } else {
         alert("Contraseña incorrecta");
