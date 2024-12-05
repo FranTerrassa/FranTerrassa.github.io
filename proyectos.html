@@ -13,7 +13,7 @@
   <header>
     <img src="logo.png" alt="Logo de la página" style="width: 100px; display: block; margin: 0 auto;">
     <h1>Small PCB Page - Proyectos Retro</h1>
-    <p class="intro-text">Explora kits electrónicos, proyectos retro y placas PCB personalizadas para MSX, Spectrum, Amstrad, y más sistemas retro.</p>
+    <p class="intro-text">Explora kits electrónicos, proyectos retro y placas PCB personalizadas para MSX, Spectrum, Amstrad, y más sistemas retro</p>
   </header>
 
   <nav>
@@ -23,8 +23,8 @@
     <a href="mailto:franterrassawp@gmail.com" class="nav-button">Contacto</a>
   </nav>
 
-  <!-- Botones laterales -->
-  <div class="sidebar">
+  <!-- Botones en el fondo -->
+  <div class="buttons-container">
     <button class="menu-btn">MSX</button>
     <button class="menu-btn">SPECTRUM</button>
     <button class="menu-btn">AMSTRAD</button>
@@ -36,15 +36,25 @@
     <button class="menu-btn">ELECTRÓNICA</button>
   </div>
 
+  <!-- Cartel de construcción -->
+  <div id="cartel-en-construccion">
+    <p>Página en construcción, perdonen las molestias</p>
+  </div>
+
+  <div class="control-cartel">
+    <button onclick="activarCartel()">Mostrar cartel</button>
+    <button onclick="desactivarCartel()">Ocultar cartel</button>
+  </div>
+
   <main>
     <section id="novedades">
       <h2>Novedades: Nuevos Kits y Placas PCB para Consolas Retro</h2>
       <div class="project">
         <h3>Proyecto 1: Kit Ardutester</h3>
         <a href="proyecto1.html">
-          <img src="ardutester1.jpg" alt="Imagen del Proyecto 1" class="imagen-proyecto">
+          <img src="ardutester1.jpg" alt="Imagen del Proyecto 1">
         </a>
-        <p>Aparato a base de Arduino para comprobar el estado de componentes electrónicos.</p>
+        <p>Aparato a base de arduino para comprobar estado de componentes electrónicos</p>
         <a href="https://github.com/FranTerrassa/Ardutester/tree/main" target="_blank" class="repo-button">Repositorio</a>
       </div>
     </section>
@@ -53,22 +63,24 @@
   <footer>
     <p>&copy; 2024 Small PCB Page. Todos los derechos reservados.</p>
   </footer>
-</body>
-</html>
-
 
   <script>
+    // Restaurar estado del cartel al cargar la página
     window.onload = function() {
       if (localStorage.getItem("cartelActivo") === "true") {
         const cartel = document.getElementById('cartel-en-construccion');
         if (cartel) {
           cartel.classList.add('mostrar');
+          // Desactivar botones
           const botones = document.querySelectorAll('.nav-button, .repo-button');
-          botones.forEach(button => button.classList.add('botones-desactivados'));
+          botones.forEach(button => {
+            button.classList.add('botones-desactivados');
+          });
         }
       }
     };
 
+    // Activar el cartel con contraseña
     function activarCartel() {
       let password = prompt("Introduce la contraseña:");
       if (password === "Ainhoa2005!!") {
@@ -76,14 +88,19 @@
         if (cartel) {
           cartel.classList.add('mostrar');
           localStorage.setItem("cartelActivo", "true");
+
+          // Desactivar botones
           const botones = document.querySelectorAll('.nav-button, .repo-button');
-          botones.forEach(button => button.classList.add('botones-desactivados'));
+          botones.forEach(button => {
+            button.classList.add('botones-desactivados');
+          });
         }
       } else {
         alert("Contraseña incorrecta");
       }
     }
 
+    // Desactivar el cartel con contraseña
     function desactivarCartel() {
       let password = prompt("Introduce la contraseña:");
       if (password === "Ainhoa2005!!") {
@@ -91,8 +108,12 @@
         if (cartel) {
           cartel.classList.remove('mostrar');
           localStorage.setItem("cartelActivo", "false");
+
+          // Reactivar los botones
           const botones = document.querySelectorAll('.nav-button, .repo-button');
-          botones.forEach(button => button.classList.remove('botones-desactivados'));
+          botones.forEach(button => {
+            button.classList.remove('botones-desactivados');
+          });
         }
       } else {
         alert("Contraseña incorrecta");
@@ -101,3 +122,4 @@
   </script>
 </body>
 </html>
+
