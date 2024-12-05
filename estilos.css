@@ -4,7 +4,6 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
   background-image: url('fondo.gif');
   background-size: cover;
   background-attachment: fixed;
@@ -25,53 +24,38 @@ header h1 {
   font-size: 2rem;
 }
 
-/* Texto introductorio */
-.intro-text {
-  font-weight: bold;
-  text-align: center;
-  font-size: 1.5rem;
-  margin-top: 1rem;
-}
-
-/* Barra lateral */
+/* Barra lateral fija sobre el fondo */
 .sidebar {
   position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #f4f4f4;
-  width: 200px;
-  height: 100%;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  overflow-y: auto;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 1000;
 }
 
 .menu-btn {
   display: block;
-  width: 90%;
-  padding: 12px 10px;
-  margin: 10px auto;
-  font-size: 16px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
   color: #333;
-  background: linear-gradient(to right, #ffffff, #f7f7f7);
+  background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .menu-btn:hover {
-  background-color: #eaeaea;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(230, 230, 230, 0.9);
 }
 
 /* Contenido principal */
 main {
-  margin-left: 220px;
   padding: 2rem;
-  max-width: calc(100% - 240px);
+  max-width: 800px;
+  margin: 2rem auto;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -86,16 +70,3 @@ footer {
   margin-top: 2rem;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-  .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    box-shadow: none;
-  }
-
-  main {
-    margin-left: 0;
-  }
-}
