@@ -54,57 +54,60 @@
 
   <script>
     // Restaurar estado del cartel al cargar la página
-    window.onload = function() {
-      if (localStorage.getItem("cartelActivo") === "true") {
-        const cartel = document.getElementById('cartel-en-construccion');
-        if (cartel) {
-          cartel.classList.add('mostrar');
-          // Desactivar botones
-          const botones = document.querySelectorAll('.nav-button, .repo-button');
-          botones.forEach(button => {
-            button.classList.add('botones-desactivados');
-          });
-        }
-      }
-    };
-
-    // Activar el cartel con contraseña
-    function activarCartel() {
-      let password = prompt("Introduce la contraseña:");
-      if (password === "Ainhoa2005!!") {
-        const cartel = document.getElementById('cartel-en-construccion');
-        if (cartel) {
-          cartel.classList.add('mostrar');
-          localStorage.setItem("cartelActivo", "true");
-
-          // Desactivar botones
-          const botones = document.querySelectorAll('.nav-button, .repo-button');
-          botones.forEach(button => {
-            button.classList.add('botones-desactivados');
-          });
-        }
-      } else {
-        alert("Contraseña incorrecta");
-      }
+window.onload = function() {
+  if (localStorage.getItem("cartelActivo") === "true") {
+    const cartel = document.getElementById('cartel-en-construccion');
+    if (cartel) {
+      cartel.classList.add('mostrar');
+      // Desactivar botones de los proyectos
+      const botones = document.querySelectorAll('.menu-btn');
+      botones.forEach(button => {
+        button.classList.add('botones-desactivados');
+      });
     }
+  }
+};
 
-    // Desactivar el cartel con contraseña
-    function desactivarCartel() {
-      let password = prompt("Introduce la contraseña:");
-      if (password === "Ainhoa2005!!") {
-        const cartel = document.getElementById('cartel-en-construccion');
-        if (cartel) {
-          cartel.classList.remove('mostrar');
-          localStorage.setItem("cartelActivo", "false");
+// Activar el cartel con contraseña
+function activarCartel() {
+  let password = prompt("Introduce la contraseña:");
+  if (password === "Ainhoa2005!!") {
+    const cartel = document.getElementById('cartel-en-construccion');
+    if (cartel) {
+      cartel.classList.add('mostrar');
+      localStorage.setItem("cartelActivo", "true");
 
-          // Reactivar los botones
-          const botones = document.querySelectorAll('.nav-button, .repo-button');
-          botones.forEach(button => {
-            button.classList.remove('botones-desactivados');
-          });
-        }
-      } else {
-        alert("Contraseña incorrecta");
+      // Desactivar los botones de los proyectos
+      const botones = document.querySelectorAll('.menu-btn');
+      botones.forEach(button => {
+        button.classList.add('botones-desactivados');
+      });
+    }
+  } else {
+    alert("Contraseña incorrecta");
+  }
+}
+
+// Desactivar el cartel con contraseña
+function desactivarCartel() {
+  let password = prompt("Introduce la contraseña:");
+  if (password === "Ainhoa2005!!") {
+    const cartel = document.getElementById('cartel-en-construccion');
+    if (cartel) {
+      cartel.classList.remove('mostrar');
+      localStorage.setItem("cartelActivo", "false");
+
+      // Reactivar los botones de los proyectos
+      const botones = document.querySelectorAll('.menu-btn');
+      botones.forEach(button => {
+        button.classList.remove('botones-desactivados');
+      });
+    }
+  } else {
+    alert("Contraseña incorrecta");
+  }
+}
+
       }
     }
   </script>
