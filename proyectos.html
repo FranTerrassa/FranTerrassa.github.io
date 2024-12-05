@@ -25,25 +25,15 @@
 
   <!-- Botones en el fondo -->
   <div class="buttons-container">
-<button class="menu-btn"><a href="msx.html">MSX</a></button>
-<button class="menu-btn"><a href="spectrum.html">SPECTRUM</a></button>
-<button class="menu-btn"><a href="amstrad.html">AMSTRAD</a></button>
-<button class="menu-btn"><a href="playstation.html">PLAYSTATION</a></button>
-<button class="menu-btn"><a href="nintendo.html">NINTENDO</a></button>
-<button class="menu-btn"><a href="sega.html">SEGA</a></button>
-<button class="menu-btn"><a href="mvs.html">MVS (NEO GEO)</a></button>
-<button class="menu-btn"><a href="varios.html">VARIOS SISTEMAS</a></button>
-<button class="menu-btn"><a href="electronica.html">ELECTRÓNICA</a></button>
-  </div>
-
-  <!-- Cartel de construcción -->
-  <div id="cartel-en-construccion">
-    <p>Página en construcción, perdonen las molestias</p>
-  </div>
-
-  <div class="control-cartel">
-    <button onclick="activarCartel()">Mostrar cartel</button>
-    <button onclick="desactivarCartel()">Ocultar cartel</button>
+    <button class="menu-btn"><a href="msx.html">MSX</a></button>
+    <button class="menu-btn"><a href="spectrum.html">SPECTRUM</a></button>
+    <button class="menu-btn"><a href="amstrad.html">AMSTRAD</a></button>
+    <button class="menu-btn"><a href="playstation.html">PLAYSTATION</a></button>
+    <button class="menu-btn"><a href="nintendo.html">NINTENDO</a></button>
+    <button class="menu-btn"><a href="sega.html">SEGA</a></button>
+    <button class="menu-btn"><a href="mvs.html">MVS (NEO GEO)</a></button>
+    <button class="menu-btn"><a href="varios.html">VARIOS SISTEMAS</a></button>
+    <button class="menu-btn"><a href="electronica.html">ELECTRÓNICA</a></button>
   </div>
 
   <main>
@@ -63,67 +53,5 @@
   <footer>
     <p>&copy; 2024 Small PCB Page. Todos los derechos reservados.</p>
   </footer>
-
-  <script>
- // Restaurar estado del cartel al cargar la página
-window.onload = function() {
-  if (localStorage.getItem("cartelActivo") === "true") {
-    const cartel = document.getElementById('cartel-en-construccion');
-    if (cartel) {
-      cartel.classList.add('mostrar');
-      // Desactivar todos los botones, excepto el del cartel
-      const botones = document.querySelectorAll('.nav-button, .menu-btn, .repo-button');
-      botones.forEach(button => {
-        button.classList.add('botones-desactivados');
-      });
-    }
-  }
-};
-
-// Activar el cartel con contraseña
-function activarCartel() {
-  let password = prompt("Introduce la contraseña:");
-  if (password === "Ainhoa2005!!") {
-    const cartel = document.getElementById('cartel-en-construccion');
-    if (cartel) {
-      cartel.classList.add('mostrar');
-      localStorage.setItem("cartelActivo", "true");
-
-      // Desactivar todos los botones, excepto el del cartel
-      const botones = document.querySelectorAll('.nav-button, .menu-btn, .repo-button');
-      botones.forEach(button => {
-        button.classList.add('botones-desactivados');
-      });
-    }
-  } else {
-    alert("Contraseña incorrecta");
-  }
-}
-
-// Desactivar el cartel con contraseña
-function desactivarCartel() {
-  let password = prompt("Introduce la contraseña:");
-  if (password === "Ainhoa2005!!") {
-    const cartel = document.getElementById('cartel-en-construccion');
-    if (cartel) {
-      cartel.classList.remove('mostrar');
-      localStorage.setItem("cartelActivo", "false");
-
-      // Reactivar todos los botones
-      const botones = document.querySelectorAll('.nav-button, .menu-btn, .repo-button');
-      botones.forEach(button => {
-        button.classList.remove('botones-desactivados');
-      });
-    }
-  } else {
-    alert("Contraseña incorrecta");
-  }
-}
-
-
-      }
-    }
-  </script>
 </body>
 </html>
-
