@@ -37,7 +37,7 @@ header h1 {
 .buttons-container {
   position: absolute;
   left: 10px;
-  top: 100px; /* Ajusta esta posición si necesitas moverlos más abajo */
+  top: 400px; /* Ajusta esta posición si necesitas moverlos más abajo */
   z-index: 10;
 }
 
