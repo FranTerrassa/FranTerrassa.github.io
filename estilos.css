@@ -1,77 +1,135 @@
 /* Estilos generales */
 body {
   font-family: Arial, sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-image: url('fondo.gif');
+  background-color: #f9f9f9;
+  color: #333;
+  background-image: url('fondo.gif'); /* GIF de fondo */
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  color: #333;
 }
 
 /* Encabezado */
 header {
-  background-color: rgba(0, 115, 230, 0.8);
+  background-color: rgba(0, 115, 230, 0.8); /* Fondo semitransparente */
   color: white;
   padding: 1rem;
   text-align: center;
 }
 
-/* Barra lateral fija */
-.sidebar {
-  position: fixed;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  z-index: 1000;
+header h1 {
+  margin: 0;
+  font-size: 2rem;
 }
 
+/* Texto introductorio */
+.intro-text {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Estilo para la barra lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f4f4f4; /* Fondo blanco/gris claro */
+  width: 200px; /* Ancho de la barra lateral */
+  height: 100%; /* Altura completa de la ventana */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Scroll si el contenido es demasiado largo */
+  background-color: #0073e6; /* Fondo azul */
+}
+
+/* Estilo para los botones del menú */
 .menu-btn {
   display: block;
-  padding: 8px 12px;
+  width: 100%;
+  padding: 10px 15px;
   margin-bottom: 10px;
-  font-size: 14px;
-  color: white;
-  background-color: #0073e6;
+  font-size: 16px;
+  color: #fff; /* Texto blanco */
+  background-color: #0073e6; /* Fondo azul */
   border: none;
   border-radius: 5px;
-  text-align: center;
+  text-align: left;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .menu-btn:hover {
-  background-color: #005bb5;
+  background-color: #005bb5; /* Color al pasar el ratón */
 }
 
-/* Navegación */
+/* Navegación principal */
 nav {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.nav-button {
-  padding: 10px 20px;
-  background-color: #0073e6;
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  border-radius: 5px;
+  margin-top: 1rem;
   text-align: center;
 }
 
-.nav-button:hover {
-  background-color: #005bb5;
+nav a {
+  padding: 10px 20px;
+  background-color: #0073e6; /* Fondo azul */
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px;
+  display: inline-block;
 }
 
-/* Contenido principal */
+nav a:hover {
+  background-color: #005bb5; /* Efecto hover */
+}
+
+/* Contenedor principal */
 main {
-  padding: 20px;
+  padding: 2rem;
   max-width: 800px;
-  margin: auto;
-  background: rgba(255, 255, 255, 0.9);
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado de secciones */
+h2 {
+  text-align: center;
+  color: #005bb5;
+}
+
+/* Proyectos */
+.project img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo específico para imágenes de proyectos */
+.imagen-proyecto {
+  width: 250px; /* Ajusta el ancho deseado */
+  height: auto; /* Mantiene las proporciones */
+  display: block; /* Centra la imagen */
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Pie de página */
+footer {
+  background-color: #0073e6;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
 }
