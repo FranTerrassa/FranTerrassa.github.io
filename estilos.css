@@ -143,3 +143,9 @@ footer {
 #cartel-en-construccion button:hover {
   background-color: #e04d2b;
 }
+
+/* Desactivar botones cuando el cartel esté activo */
+.botones-desactivados {
+  pointer-events: none; /* Desactiva los eventos de los botones */
+  opacity: 0.5; /* Hace que los botones se vean deshabilitados */
+}
