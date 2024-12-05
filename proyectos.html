@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyectos</title>
+  <meta name="description" content="Explora nuestros proyectos retro, kits electrónicos y placas PCB para MSX, Spectrum y otros sistemas clásicos.">
+  <meta name="keywords" content="proyectos retro, kits electrónicos, placas PCB, MSX, Spectrum, kits retro">
+  <title>Proyectos Retro - Small PCB Page</title>
   <link rel="stylesheet" href="estilos.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
   <header>
     <img src="logo.png" alt="Logo de la página" style="width: 100px; display: block; margin: 0 auto;">
-    <h1>Proyectos</h1>
+    <h1>Small PCB Page - Proyectos Retro</h1>
+    <p class="intro-text">Explora kits electrónicos, proyectos retro y placas PCB personalizadas para MSX, Spectrum, Amstrad, y más sistemas retro</p>
   </header>
 
   <nav>
@@ -31,25 +35,16 @@
   </div>
 
   <main>
-    <section id="categorias">
-      <h2>Categorías</h2>
-      <div class="category-buttons">
-        <button onclick="filtrarProyectos('PlayStation')">PlayStation</button>
-        <button onclick="filtrarProyectos('Sega Mega Drive')">Sega Mega Drive</button>
-        <button onclick="filtrarProyectos('Super Nintendo')">Super Nintendo</button>
-        <button onclick="filtrarProyectos('MSX')">MSX</button>
-        <button onclick="filtrarProyectos('Spectrum')">Spectrum</button>
-        <button onclick="filtrarProyectos('Amstrad')">Amstrad</button>
-        <button onclick="filtrarProyectos('Neo Geo MVS')">Neo Geo MVS</button>
-        <button onclick="filtrarProyectos('Varios sistemas')">Varios sistemas</button>
-        <button onclick="filtrarProyectos('Electronica')">Electronica</button>        
-        <button onclick="filtrarProyectos('')">Mostrar todos</button>
+    <section id="novedades">
+      <h2>Novedades: Nuevos Kits y Placas PCB para Consolas Retro</h2>
+      <div class="project">
+        <h3>Proyecto 1: Kit Ardutester</h3>
+        <a href="proyecto1.html">
+          <img src="ardutester1.jpg" alt="Imagen del Proyecto 1">
+        </a>
+        <p>Aparato a base de arduino para comprobar estado de componentes electrónicos</p>
+        <a href="https://github.com/FranTerrassa/Ardutester/tree/main" target="_blank" class="repo-button">Repositorio</a>
       </div>
-    </section>
-
-    <section id="proyectos">
-      <h2>Todos los Proyectos</h2>
-      <div id="proyectos-container"></div>
     </section>
   </main>
 
@@ -58,38 +53,42 @@
   </footer>
 
   <script>
-    // Proyectos de ejemplo
-    const proyectos = [
-      { nombre: "Kit Ardutester", categoria: "Electronica", imagen: "ardutester1.jpg", enlace: "proyecto1.html", descripcion: "Comprueba componentes electrónicos." },
-      { nombre: "Kit Gotek V2", categoria: "Varios sistemas", imagen: "gotek2.jpg", enlace: "proyecto2.html", descripcion: "Reemplaza tu disquetera con USB." }
-    ];
+    // Restaurar estado del cartel al cargar la página
+    window.onload = function() {
+      if (localStorage.getItem("cartelActivo") === "true") {
+        const cartel = document.getElementById('cartel-en-construccion');
+        if (cartel) {
+          cartel.classList.add('mostrar');
+          // Desactivar botones
+          const botones = document.querySelectorAll('.nav-button, .repo-button');
+          botones.forEach(button => {
+            button.classList.add('botones-desactivados');
+          });
+        }
+      }
+    };
 
-    const proyectosContainer = document.getElementById("proyectos-container");
+    // Activar el cartel con contraseña
+    function activarCartel() {
+      let password = prompt("Introduce la contraseña:");
+      if (password === "Ainhoa2005!!") {
+        const cartel = document.getElementById('cartel-en-construccion');
+        if (cartel) {
+          cartel.classList.add('mostrar');
+          localStorage.setItem("cartelActivo", "true");
 
-    function mostrarProyectos(filtro = "") {
-      proyectosContainer.innerHTML = "";
-      const proyectosFiltrados = filtro
-        ? proyectos.filter(proyecto => proyecto.categoria === filtro)
-        : proyectos;
-
-      proyectosFiltrados.forEach(proyecto => {
-        proyectosContainer.innerHTML += `
-          <div class="project">
-            <h3>${proyecto.nombre}</h3>
-            <a href="${proyecto.enlace}">
-              <img src="${proyecto.imagen}" alt="Imagen del ${proyecto.nombre}">
-            </a>
-            <p>${proyecto.descripcion}</p>
-          </div>
-        `;
-      });
+          // Desactivar botones
+          const botones = document.querySelectorAll('.nav-button, .repo-button');
+          botones.forEach(button => {
+            button.classList.add('botones-desactivados');
+          });
+        }
+      } else {
+        alert("Contraseña incorrecta");
+      }
     }
 
-    mostrarProyectos();
+    // Desactivar el cartel con contraseña
+    function desactivarCartel() {
+      let password = prompt("Introduce la
 
-    function filtrarProyectos(categoria) {
-      mostrarProyectos(categoria);
-    }
-  </script>
-</body>
-</html>
