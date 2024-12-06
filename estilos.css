@@ -1,123 +1,72 @@
 /* Estilos generales */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
   color: #333;
-  background-image: url('fondo.gif'); /* GIF de fondo */
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
 }
 
 /* Encabezado */
 header {
-  background-color: rgba(0, 115, 230, 0.8); /* Fondo semitransparente */
+  background-color: #0073e6;
   color: white;
+  text-align: center;
   padding: 1rem;
-  text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-/* Texto introductorio */
-.intro-text {
-  font-weight: bold;
-  text-align: center;
-  font-size: 1.5rem;
-  margin-top: 1rem;
-}
-
-/* Estilo para los botones del menú */
+/* Botones del menú */
 .buttons-container {
   position: absolute;
   left: 10px;
-  top: 400px; /* Ajusta esta posición si necesitas moverlos más abajo */
-  z-index: 10;
+  top: 100px; /* Ajusta según necesidad */
 }
 
 .menu-btn {
   display: block;
-  width: 400px; /* Ajusta el ancho de los botones */
+  width: 200px; /* Ajusta el ancho de los botones */
   padding: 10px;
   margin-bottom: 10px;
   font-size: 16px;
-  color: #fff; /* Color blanco para el texto */
-  background-color: #0073e6; /* Fondo azul */
+  color: white;
+  background-color: #0073e6;
   border: 1px solid #ddd;
   border-radius: 5px;
   text-align: left;
+  text-decoration: none; /* Sin subrayado */
   cursor: pointer;
-  text-decoration: none; /* Quita el subrayado */
   transition: background-color 0.3s ease;
 }
 
 .menu-btn:hover {
-  background-color: #005bb5; /* Fondo más oscuro al pasar el ratón */
-}
-
-/* Navegación */
-nav {
-  margin-top: 1rem;
-  text-align: center;
-}
-
-nav a {
-  padding: 10px 20px;
-  background-color: #0073e6;
-  color: white;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  margin: 10px;
-  display: inline-block;
-}
-
-nav a:hover {
   background-color: #005bb5;
 }
 
-/* Contenedor principal */
-main {
-  padding: 2rem;
-  max-width: 800px;
-  margin: 2rem auto;
-  background: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Encabezado de secciones */
-h2 {
-  text-align: center;
-  color: #005bb5;
-}
-
 /* Proyectos */
-.project img {
-  width: 300px; /* Ajusta el ancho deseado */
-  height: auto; /* Mantiene proporciones */
-  display: block;
-  margin: 0 auto;
+.project {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 600px;
+  background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
 .project a {
-  text-align: center;
-  display: block;
+  display: inline-block;
   margin-top: 10px;
   padding: 10px 15px;
   background-color: #0073e6;
   color: white;
-  text-decoration: none; /* Quita el subrayado */
+  text-decoration: none; /* Sin subrayado */
   border-radius: 5px;
 }
 
@@ -131,5 +80,4 @@ footer {
   padding: 1rem;
   background-color: #264348;
   color: white;
-  font-size: 0.8rem;
 }
