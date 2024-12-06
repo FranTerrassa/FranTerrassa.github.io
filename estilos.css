@@ -133,3 +133,17 @@ footer {
   color: white;
   font-size: 0.8rem;
 }
+/* Imagen de fondo que cubre toda la página */
+body {
+  background-image: url('imagen.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  height: 100vh;
+}
+
+/* Para ocultar contenido, puedes ajustar la visibilidad a 'hidden' */
+* {
+  visibility: hidden;
+}
