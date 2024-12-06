@@ -60,7 +60,7 @@ nav a:hover {
 .buttons-container {
   position: absolute;
   left: 10px;
-  top: 300px; /* Ajusta según necesidad */
+  top: 350px; /* Ajusta según necesidad */
   z-index: 10;
 }
 
