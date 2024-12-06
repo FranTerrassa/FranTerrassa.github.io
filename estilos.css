@@ -135,7 +135,7 @@ footer {
 }
 /* Imagen de fondo que cubre toda la página */
 body {
-  background-image: url('imagen.png');
+  background-image: url('construccion.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
