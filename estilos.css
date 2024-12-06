@@ -41,9 +41,9 @@ header h1 {
   z-index: 10;
 }
 
-.menu-btn {
+.menu-btn a{
   display: block;
-  width: 100px; /* Ajusta el ancho de los botones */
+  width: 400px; /* Ajusta el ancho de los botones */
   padding: 10px;
   margin-bottom: 10px;
   font-size: 16px;
