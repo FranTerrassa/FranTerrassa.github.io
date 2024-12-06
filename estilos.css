@@ -41,23 +41,24 @@ header h1 {
   z-index: 10;
 }
 
-.menu-btn a{
+.menu-btn a {
   display: block;
   width: 400px; /* Ajusta el ancho de los botones */
   padding: 10px;
   margin-bottom: 10px;
   font-size: 16px;
-  color: #fff;
+  color: #fff; /* Color blanco para el texto */
   background-color: #0073e6; /* Fondo azul */
   border: 1px solid #ddd;
   border-radius: 5px;
   text-align: left;
   cursor: pointer;
+  text-decoration: none; /* Quita el subrayado */
   transition: background-color 0.3s ease;
 }
 
-.menu-btn:hover {
-  background-color: #005bb5; /* Color al pasar el ratón */
+.menu-btn a:hover {
+  background-color: #005bb5; /* Fondo más oscuro al pasar el ratón */
 }
 
 /* Navegación */
@@ -116,7 +117,7 @@ h2 {
   padding: 10px 15px;
   background-color: #0073e6;
   color: white;
-  text-decoration: none;
+  text-decoration: none; /* Quita el subrayado */
   border-radius: 5px;
 }
 
