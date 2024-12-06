@@ -41,7 +41,7 @@ header h1 {
   z-index: 10;
 }
 
-.menu-btn  {
+.menu-btn {
   display: block;
   width: 400px; /* Ajusta el ancho de los botones */
   padding: 10px;
@@ -57,7 +57,7 @@ header h1 {
   transition: background-color 0.3s ease;
 }
 
-.menu-btn a:hover {
+.menu-btn:hover {
   background-color: #005bb5; /* Fondo más oscuro al pasar el ratón */
 }
 
